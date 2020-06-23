@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aritmetičke operacije</title>
+</head>
+
+<body>
+    <script>
+
+        let brojA = prompt("Unesite prvi broj: ");
+        let operator = prompt("Unesite željenu aritmetičku operaciju: ");
+        let brojB = prompt("Unesite drugi broj: ");
+
+        brojA = parseFloat(brojA);
+        brojB = parseFloat(brojB);
+
+        if (isNaN(brojA) || isNaN(brojB)) {
+            alert('Uneti operandi moraju biti brojevi.');
+        } else {
+            switch (operator) {
+                case "+":
+                    alert("Rešenje iznosi: " + (brojA + brojB));;
+                    break;
+                case "-":
+                    alert("Rešenje iznosi: " + (brojA - brojB));
+                    break;
+                case "*":
+                    alert("Rešenje iznosi: " + (brojA * brojB));
+                    break;
+                case "/":
+                    if (brojB == 0) {
+                        alert("Deljenje sa 0 nije dozvoljeno.");
+                    } else {
+                        alert("Rešenje iznosi: " + (brojA / brojB));
+                    }
+                    break;
+                default:
+                    alert("Unetu aritmetičku operaciju program ne podržava.");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
